@@ -1,12 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>enable</Nullable>
+    <!--<TargetFramework>netstandard2.1</TargetFramework>-->
+
+	<!-- multi target in order to use the ef core power tools designer -->
+	<TargetFrameworks>netcoreapp3.1;netstandard2.1</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
